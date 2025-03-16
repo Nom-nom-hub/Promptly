@@ -539,30 +539,41 @@ function showRandomPrompt() {
 
 // Generate a new professional prompt
 function generateNewPrompt() {
+    console.log("Generate new prompt function called");
+    
     // Show loading state
     generatePromptBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
     generatePromptBtn.disabled = true;
     
     // Generate a new prompt using templates
     setTimeout(() => {
-        const newPrompt = createPromptFromTemplates();
-        
-        // Add to promptsData
-        promptsData.push(newPrompt);
-        
-        // Save to localStorage
-        localStorage.setItem('customPrompts', JSON.stringify(promptsData));
-        
-        // Reset button
-        generatePromptBtn.innerHTML = '<i class="fas fa-magic"></i> Generate New';
-        generatePromptBtn.disabled = false;
-        
-        // Update display and stats
-        displayPrompts();
-        updateStats();
-        
-        // Highlight the new prompt
-        highlightPrompt(newPrompt.id);
+        try {
+            const newPrompt = createPromptFromTemplates();
+            console.log("New prompt created:", newPrompt);
+            
+            // Add to promptsData
+            promptsData.push(newPrompt);
+            
+            // Save to localStorage
+            localStorage.setItem('customPrompts', JSON.stringify(promptsData));
+            
+            // Reset button
+            generatePromptBtn.innerHTML = '<i class="fas fa-magic"></i> Generate New';
+            generatePromptBtn.disabled = false;
+            
+            // Update display and stats
+            displayPrompts();
+            updateStats();
+            
+            // Highlight the new prompt
+            highlightPrompt(newPrompt.id);
+        } catch (error) {
+            console.error("Error generating prompt:", error);
+            // Reset button even if there's an error
+            generatePromptBtn.innerHTML = '<i class="fas fa-magic"></i> Generate New';
+            generatePromptBtn.disabled = false;
+            showToast("Error generating prompt. Check console for details.", "error");
+        }
     }, 800); // Simulate generation time
 }
 
