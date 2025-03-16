@@ -163,3 +163,70 @@ window.dispatchEvent(new Event('promptsLoaded'));
 
 console.log('Prompts loaded:', window.promptsData.length, 'items');
 console.log('First prompt:', window.promptsData[0]);
+
+// New prompts generated on 2025-03-16T18:23:12.422Z
+const newGeneratedPrompts = [
+    {
+        id: 11,
+        title: "Data Analysis Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 12,
+        title: "Code Review Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 13,
+        title: "Email Campaign Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 14,
+        title: "Ad Copy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 15,
+        title: "Data Visualization Framework",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 16,
+        title: "Meeting Agenda Generator",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 17,
+        title: "Brand Guidelines Assistant",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 18,
+        title: "Data Analysis Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 19,
+        title: "Executive Summary Guide",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 20,
+        title: "Essay Structure Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    }
+];
+
+// Add these to defaultPromptsData
+defaultPromptsData.push(...newGeneratedPrompts);
