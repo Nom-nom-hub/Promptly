@@ -297,17 +297,28 @@
                     updateStatus('Syncing prompts from GitHub...');
                     
                     // Fetch latest prompts
-                    fetchLatestPrompts().then(success => {
-                        // Update button
+                    if (typeof fetchLatestPrompts === 'function') {
+                        fetchLatestPrompts().then(success => {
+                            // Update button
+                            syncButton.innerHTML = '<i class="fas fa-sync-alt"></i> Sync Prompts';
+                            syncButton.disabled = false;
+                            
+                            // Update status
+                            updateStatus(success ? 'Prompts synced successfully!' : 'Sync failed, check console');
+                            setTimeout(() => {
+                                if (loadingStatus) loadingStatus.style.display = 'none';
+                            }, 2000);
+                        });
+                    } else {
+                        console.error('fetchLatestPrompts function not found');
+                        // Restore button state
                         syncButton.innerHTML = '<i class="fas fa-sync-alt"></i> Sync Prompts';
                         syncButton.disabled = false;
-                        
-                        // Update status
-                        updateStatus(success ? 'Prompts synced successfully!' : 'Sync failed, check console');
+                        updateStatus('Sync failed: function not available');
                         setTimeout(() => {
                             if (loadingStatus) loadingStatus.style.display = 'none';
                         }, 2000);
-                    });
+                    }
                 });
             }
         });
