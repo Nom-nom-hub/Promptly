@@ -263,8 +263,11 @@
         // Update loading status
         function updateStatus(message) {
             if (loadingStatus) {
-                loadingStatus.textContent = message;
-                console.log('Status:', message);
+                // Don't show "DOM loaded, waiting for prompts..." message
+                if (message !== 'DOM loaded, waiting for prompts...') {
+                    loadingStatus.textContent = message;
+                    console.log('Status:', message);
+                }
             }
         }
         
