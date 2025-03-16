@@ -22,6 +22,11 @@
     <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
 </head>
 <body class="light-mode">
+    <!-- Add this right after the opening <body> tag -->
+    <div id="loading-status" style="position: fixed; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: white; padding: 10px; border-radius: 5px; z-index: 9999;">
+        Loading app...
+    </div>
+
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -249,9 +254,45 @@
 
     <!-- Add this before your closing </body> tag -->
     <script>
-        // Initialize global promptsData and track loading state
-        window.promptsData = [];
-        window.promptsLoaded = false;
+        // Show loading status
+        const loadingStatus = document.getElementById('loading-status');
+        
+        // Update loading status
+        function updateStatus(message) {
+            if (loadingStatus) {
+                loadingStatus.textContent = message;
+                console.log('Status:', message);
+            }
+        }
+        
+        // Listen for DOM content loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatus('DOM loaded, waiting for prompts...');
+        });
+        
+        // Listen for prompts loaded
+        window.addEventListener('promptsLoaded', function() {
+            updateStatus('Prompts loaded, initializing app...');
+            setTimeout(function() {
+                if (loadingStatus) loadingStatus.style.display = 'none';
+            }, 2000);
+        });
+
+        // Add event listener for the sync button
+        document.addEventListener('DOMContentLoaded', function() {
+            const syncButton = document.getElementById('sync-prompts');
+            if (syncButton) {
+                syncButton.addEventListener('click', function() {
+                    updateStatus('Syncing prompts from GitHub...');
+                    fetchLatestPrompts().then(success => {
+                        updateStatus(success ? 'Prompts synced successfully!' : 'Sync failed, check console');
+                        setTimeout(() => {
+                            if (loadingStatus) loadingStatus.style.display = 'none';
+                        }, 2000);
+                    });
+                });
+            }
+        });
     </script>
     <!-- Load prompts.js first with defer -->
     <script src="./js/prompts.js"></script>

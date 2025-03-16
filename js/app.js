@@ -22,6 +22,23 @@ let promptUsage = JSON.parse(localStorage.getItem('promptUsage')) || {};
 
 // Wait for everything to be ready
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, dark mode state:', darkMode);
+    
+    // Apply dark mode immediately if needed
+    if (darkMode) {
+        document.body.classList.add('dark-mode');
+        console.log('Dark mode applied to body');
+    }
+    
+    // Make sure theme toggle works
+    themeToggle.addEventListener('click', function() {
+        console.log('Theme toggle clicked');
+        document.body.classList.toggle('dark-mode');
+        darkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', darkMode);
+        console.log('Dark mode toggled to:', darkMode);
+    });
+    
     // Check if prompts are already loaded
     if (window.promptsLoaded) {
         initializeApp();
