@@ -22,21 +22,31 @@ let promptUsage = JSON.parse(localStorage.getItem('promptUsage')) || {};
 
 // Wait for everything to be ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Safety check
-    if (!window.promptsData) {
-        console.error('promptsData not found, initializing empty array');
-        window.promptsData = [];
+    // Check if prompts are already loaded
+    if (window.promptsLoaded) {
+        initializeApp();
+    } else {
+        // Wait for prompts to load
+        window.addEventListener('promptsLoaded', initializeApp);
     }
-    
-    console.log('App.js loaded');
-    console.log('Initial promptsData:', window.promptsData.length, 'prompts');
-    
-    // Initialize the app
-    initializeApp();
 });
 
 function initializeApp() {
     try {
+        // Safety check
+        if (!window.promptsData || !window.promptsData.length) {
+            console.error('No prompts found, checking defaultPromptsData');
+            // Try to recover using defaultPromptsData
+            if (typeof defaultPromptsData !== 'undefined') {
+                window.promptsData = defaultPromptsData;
+            } else {
+                throw new Error('No prompts data available');
+            }
+        }
+
+        console.log('App.js loaded');
+        console.log('Initial promptsData:', window.promptsData.length, 'prompts');
+        
         // Apply saved theme
         if (darkMode) {
             document.body.classList.add('dark-mode');

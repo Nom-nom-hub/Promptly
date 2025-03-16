@@ -3,7 +3,7 @@ if (typeof window.promptsData === 'undefined') {
     window.promptsData = [];
 }
 
-console.log('Prompts.js loaded');
+console.log('Prompts.js loading...');
 
 // Sample prompts data
 const defaultPromptsData = [
@@ -129,34 +129,15 @@ const defaultPromptsData = [
     }
 ];
 
-// Function to merge default prompts with custom prompts
-function mergePrompts(defaults, customs) {
-    try {
-        // Create a map of existing default IDs
-        const defaultIds = new Set(defaults.map(p => p.id));
-        
-        // Filter out any custom prompts that have the same IDs as defaults
-        const validCustoms = customs.filter(p => !defaultIds.has(p.id));
-        
-        // Combine defaults with valid custom prompts
-        return [...defaults, ...validCustoms];
-    } catch (error) {
-        console.error('Error merging prompts:', error);
-        return defaults; // Fallback to defaults if there's an error
-    }
-}
-
 // Initialize prompts with merged data
 try {
-    window.promptsData = mergePrompts(
-        defaultPromptsData,
-        JSON.parse(localStorage.getItem('customPrompts') || '[]')
-    );
-    
+    window.promptsData = defaultPromptsData;
     console.log('Total prompts loaded:', window.promptsData.length);
     
-    // Save the merged prompts
-    localStorage.setItem('customPrompts', JSON.stringify(window.promptsData));
+    // Signal that prompts are loaded
+    window.promptsLoaded = true;
+    // Dispatch an event when prompts are loaded
+    window.dispatchEvent(new Event('promptsLoaded'));
 } catch (error) {
     console.error('Error initializing prompts:', error);
     window.promptsData = defaultPromptsData; // Fallback to defaults

@@ -179,8 +179,9 @@ jobs:
         run: |
           mkdir -p _site/js
           cp -r js/* _site/js/
-          # Ensure proper permissions
-          chmod 644 _site/js/*.js
+          # Ensure proper permissions and line endings
+          find _site/js -type f -name "*.js" -exec chmod 644 {} \;
+          find _site/js -type f -name "*.js" -exec dos2unix {} \;
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
