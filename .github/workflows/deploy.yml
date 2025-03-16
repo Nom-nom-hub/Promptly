@@ -4,9 +4,18 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+    inputs:
+      generate_prompts:
+        description: 'Generate new prompts'
+        required: false
+        default: 'false'
+      prompt_count:
+        description: 'Number of prompts to generate'
+        required: false
+        default: '10'
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -15,11 +24,155 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  generate-prompts:
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.generate_prompts == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Generate Prompts
+        run: |
+          echo "Generating ${PROMPT_COUNT} new prompts..."
+          cat > generate-prompts.js << 'EOF'
+          const fs = require('fs');
+          
+          // Read the existing prompts.js file
+          const promptsFile = fs.readFileSync('js/prompts.js', 'utf8');
+          
+          // Function to generate a random prompt
+          function generateRandomPrompt(id) {
+            const categories = ['writing', 'coding', 'marketing', 'business', 'data', 'design'];
+            const category = categories[Math.floor(Math.random() * categories.length)];
+            
+            const titles = {
+              writing: ['Blog Post', 'Article Outline', 'Story Idea', 'Essay Structure'],
+              coding: ['Code Review', 'Algorithm Design', 'Debugging Help', 'API Documentation'],
+              marketing: ['Ad Copy', 'Email Campaign', 'Social Media Post', 'Marketing Strategy'],
+              business: ['Business Plan', 'SWOT Analysis', 'Meeting Agenda', 'Executive Summary'],
+              data: ['Data Analysis', 'Chart Interpretation', 'Statistical Model', 'Data Visualization'],
+              design: ['UI Mockup', 'Color Scheme', 'Layout Design', 'Brand Guidelines']
+            };
+            
+            const titlePrefix = titles[category][Math.floor(Math.random() * titles[category].length)];
+            const titleSuffix = ['Template', 'Generator', 'Framework', 'Guide', 'Assistant'][Math.floor(Math.random() * 5)];
+            
+            const title = `${titlePrefix} ${titleSuffix}`;
+            
+            const contentTemplates = {
+              writing: [
+                "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+                "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+                "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media."
+              ],
+              coding: [
+                "Review this code and suggest improvements for readability and performance: [CODE]",
+                "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+                "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code."
+              ],
+              marketing: [
+                "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+                "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+                "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words."
+              ],
+              business: [
+                "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+                "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+                "Develop a 30-60-90 day plan for a new [JOB_TITLE] role."
+              ],
+              data: [
+                "Explain how to interpret this data visualization: [DESCRIPTION]",
+                "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+                "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC]."
+              ],
+              design: [
+                "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+                "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+                "Suggest UI improvements for this interface: [DESCRIPTION]"
+              ]
+            };
+            
+            const content = contentTemplates[category][Math.floor(Math.random() * contentTemplates[category].length)];
+            
+            return {
+              id,
+              title,
+              content,
+              category
+            };
+          }
+          
+          // Get the highest existing ID
+          const idRegex = /id:\s*(\d+)/g;
+          let match;
+          let highestId = 0;
+          
+          while ((match = idRegex.exec(promptsFile)) !== null) {
+            const id = parseInt(match[1]);
+            if (id > highestId) {
+              highestId = id;
+            }
+          }
+          
+          // Generate new prompts
+          const count = parseInt(process.env.PROMPT_COUNT) || 10;
+          const newPrompts = [];
+          
+          for (let i = 0; i < count; i++) {
+            newPrompts.push(generateRandomPrompt(highestId + i + 1));
+          }
+          
+          // Format the new prompts as code
+          let newPromptsCode = '\n// New prompts generated on ' + new Date().toISOString() + '\n';
+          newPromptsCode += 'const newGeneratedPrompts = [\n';
+          
+          newPrompts.forEach((prompt, index) => {
+            newPromptsCode += `    {\n`;
+            newPromptsCode += `        id: ${prompt.id},\n`;
+            newPromptsCode += `        title: "${prompt.title}",\n`;
+            newPromptsCode += `        content: "${prompt.content}",\n`;
+            newPromptsCode += `        category: "${prompt.category}"\n`;
+            newPromptsCode += `    }${index < newPrompts.length - 1 ? ',' : ''}\n`;
+          });
+          
+          newPromptsCode += '];\n\n';
+          newPromptsCode += '// Add these to defaultPromptsData\n';
+          newPromptsCode += 'defaultPromptsData.push(...newGeneratedPrompts);\n';
+          
+          // Append to the prompts.js file
+          fs.appendFileSync('js/prompts.js', newPromptsCode);
+          
+          console.log(`Added ${count} new prompts to js/prompts.js`);
+          EOF
+          
+          node generate-prompts.js
+        env:
+          PROMPT_COUNT: ${{ github.event.inputs.prompt_count }}
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add js/prompts.js
+          git commit -m "Add ${PROMPT_COUNT} new prompts via GitHub Actions"
+          git push
+        env:
+          PROMPT_COUNT: ${{ github.event.inputs.prompt_count }}
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [generate-prompts]
+    if: always() && (needs.generate-prompts.result == 'success' || needs.generate-prompts.result == 'skipped')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Copy assets

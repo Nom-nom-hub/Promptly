@@ -567,6 +567,33 @@ function generateNewPrompt() {
             
             // Highlight the new prompt
             highlightPrompt(newPrompt.id);
+            
+            // Offer to save to codebase for developers
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                const saveToCodebase = confirm('Would you like to save this prompt to the codebase for all users?');
+                if (saveToCodebase) {
+                    // Format the prompt as JavaScript code
+                    let promptCode = '// New prompt generated on ' + new Date().toISOString() + '\n';
+                    promptCode += 'defaultPromptsData.push({\n';
+                    promptCode += `    id: ${newPrompt.id},\n`;
+                    promptCode += `    title: "${newPrompt.title}",\n`;
+                    promptCode += `    content: "${newPrompt.content.replace(/"/g, '\\"')}",\n`;
+                    promptCode += `    category: "${newPrompt.category}"\n`;
+                    promptCode += '});\n';
+                    
+                    // Copy to clipboard
+                    navigator.clipboard.writeText(promptCode)
+                        .then(() => {
+                            alert('Prompt code copied to clipboard! Paste this into js/prompts.js');
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy:', err);
+                            alert('Failed to copy to clipboard. See console for the code to add.');
+                            console.log('Add this to js/prompts.js:');
+                            console.log(promptCode);
+                        });
+                }
+            }
         } catch (error) {
             console.error("Error generating prompt:", error);
             // Reset button even if there's an error

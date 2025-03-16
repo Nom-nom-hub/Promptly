@@ -1,6 +1,5 @@
 // Add at the start of the file
 console.log('Prompts.js loaded');
-console.log('Default prompts:', defaultPromptsData);
 
 // Sample prompts data
 const defaultPromptsData = [
@@ -126,6 +125,29 @@ const defaultPromptsData = [
     }
 ];
 
+// Function to merge default prompts with custom prompts
+function mergePrompts(defaults, customs) {
+    // Create a map of existing default IDs
+    const defaultIds = new Set(defaults.map(p => p.id));
+    
+    // Filter out any custom prompts that have the same IDs as defaults
+    const validCustoms = customs.filter(p => !defaultIds.has(p.id));
+    
+    // Combine defaults with valid custom prompts
+    return [...defaults, ...validCustoms];
+}
+
+// Initialize prompts with merged data
+window.promptsData = mergePrompts(
+    defaultPromptsData,
+    JSON.parse(localStorage.getItem('customPrompts') || '[]')
+);
+
+// Save the merged prompts
+localStorage.setItem('customPrompts', JSON.stringify(window.promptsData));
+
+console.log('Total prompts loaded:', window.promptsData.length);
+
 // Function to assign appropriate AI models based on prompt content and category
 function assignAIModels() {
     promptsData.forEach(prompt => {
@@ -177,6 +199,59 @@ function assignAIModels() {
     localStorage.setItem('customPrompts', JSON.stringify(promptsData));
 }
 
-// Use localStorage if available, otherwise use defaults
-window.promptsData = JSON.parse(localStorage.getItem('customPrompts')) || defaultPromptsData;
 assignAIModels();
+
+// Add a function to generate and save new prompts to the codebase
+function generateAndSavePrompts(count = 5) {
+    console.log(`Generating ${count} new prompts for codebase...`);
+    
+    // Array to hold the new prompts
+    const newPrompts = [];
+    
+    // Generate the specified number of prompts
+    for (let i = 0; i < count; i++) {
+        const newPrompt = createPromptFromTemplates();
+        newPrompts.push(newPrompt);
+    }
+    
+    // Format the prompts as JavaScript code
+    let promptsCode = '// New prompts generated on ' + new Date().toISOString() + '\n';
+    promptsCode += 'const newGeneratedPrompts = [\n';
+    
+    newPrompts.forEach((prompt, index) => {
+        promptsCode += `    {\n`;
+        promptsCode += `        id: ${prompt.id},\n`;
+        promptsCode += `        title: "${prompt.title}",\n`;
+        promptsCode += `        content: "${prompt.content.replace(/"/g, '\\"')}",\n`;
+        promptsCode += `        category: "${prompt.category}"\n`;
+        promptsCode += `    }${index < newPrompts.length - 1 ? ',' : ''}\n`;
+    });
+    
+    promptsCode += '];\n\n';
+    promptsCode += '// Add these to defaultPromptsData\n';
+    promptsCode += 'defaultPromptsData.push(...newGeneratedPrompts);\n';
+    
+    // Display the code to copy
+    console.log('Copy this code to js/prompts.js:');
+    console.log(promptsCode);
+    
+    // Create a downloadable file
+    const blob = new Blob([promptsCode], { type: 'text/javascript' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'new-prompts.js';
+    document.body.appendChild(a);
+    a.click();
+    
+    // Clean up
+    setTimeout(() => {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+    }, 0);
+    
+    return newPrompts;
+}
+
+// Add to console commands
+console.generateAndSavePrompts = generateAndSavePrompts;
