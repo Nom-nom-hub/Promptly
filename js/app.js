@@ -15,8 +15,6 @@ const exportBtn = document.getElementById('export-btn');
 let currentCategory = 'all';
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let darkMode = localStorage.getItem('darkMode') === 'true';
-// Add this line to save/load prompts from localStorage
-let promptsData = JSON.parse(localStorage.getItem('customPrompts')) || window.promptsData || [];
 let currentPage = 1;
 let pageSize = 20;
 let totalPages = 1;
@@ -26,8 +24,14 @@ let communityPrompts = JSON.parse(localStorage.getItem('communityPrompts')) || [
 let notificationEmails = JSON.parse(localStorage.getItem('notificationEmails')) || [];
 let promptUsage = JSON.parse(localStorage.getItem('promptUsage')) || {};
 
-// Initialize
+// Wait for promptsData to be available
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize promptsData from window object
+    window.promptsData = window.promptsData || [];
+    
+    console.log('App.js loaded');
+    console.log('Initial promptsData:', window.promptsData);
+    
     // Apply saved theme
     if (darkMode) {
         document.body.classList.add('dark-mode');
@@ -757,6 +761,7 @@ function exportFavorites() {
         window.URL.revokeObjectURL(url);
     }, 0);
 }
+
 // Update stats counters - completely rewritten for reliability
 function updateStats() {
     // Force a direct update of the stats in the header
@@ -800,6 +805,7 @@ function updateStats() {
         }
     }, 500);
 })(); // Add console command for developers
+
 console.generatePrompts = function(count = 100) {
     return generateBulkPrompts(count);
 };
@@ -916,6 +922,7 @@ function createPromptDetailModal() {
     
     return modal;
 }
+
 // Comment out or remove the setup functions for these features
 // function setupDailyPrompt() {
 //     const dailyPromptBtn = document.getElementById('daily-prompt-btn');
@@ -1019,6 +1026,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update prompts with highlights flag
     updatePromptsWithHighlights();
 }); // Add console command for developers
+
 console.generatePrompts = function(count = 100) {
     return generateBulkPrompts(count);
 };

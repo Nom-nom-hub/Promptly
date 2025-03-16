@@ -1,4 +1,6 @@
-// Add at the start of the file
+// Initialize window.promptsData if not exists
+window.promptsData = window.promptsData || [];
+
 console.log('Prompts.js loaded');
 
 // Sample prompts data
@@ -143,10 +145,11 @@ window.promptsData = mergePrompts(
     JSON.parse(localStorage.getItem('customPrompts') || '[]')
 );
 
+// Now we can safely log
+console.log('Total prompts loaded:', window.promptsData.length);
+
 // Save the merged prompts
 localStorage.setItem('customPrompts', JSON.stringify(window.promptsData));
-
-console.log('Total prompts loaded:', window.promptsData.length);
 
 // Function to assign appropriate AI models based on prompt content and category
 function assignAIModels() {
