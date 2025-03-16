@@ -140,8 +140,8 @@ const defaultPromptsData = [
     }
 ];
 
-// Create array for new prompts
-const newPrompts = [
+// Add all new prompts to defaultPromptsData
+defaultPromptsData.push(
     {
         id: 21,
         title: "Business Plan Generator",
@@ -3165,9 +3165,6 @@ const newPrompts = [
 
 // Initialize prompts with merged data
 try {
-    // Add new prompts to defaultPromptsData
-    defaultPromptsData.push(...newPrompts);
-    
     // Set window.promptsData
     window.promptsData = defaultPromptsData;
     console.log('Total prompts loaded:', window.promptsData.length);
