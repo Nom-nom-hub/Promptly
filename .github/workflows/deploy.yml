@@ -178,7 +178,9 @@ jobs:
       - name: Copy assets
         run: |
           mkdir -p _site/js
-          cp js/*.js _site/js/
+          cp -r js/* _site/js/
+          # Ensure proper permissions
+          chmod 644 _site/js/*.js
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

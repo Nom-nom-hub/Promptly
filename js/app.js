@@ -1,7 +1,3 @@
-// Add at the start of the file
-console.log('App.js loaded');
-console.log('Initial promptsData:', promptsData);
-
 // DOM Elements
 const promptsContainer = document.getElementById('prompts-container');
 const searchInput = document.getElementById('search-input');
@@ -24,85 +20,44 @@ let communityPrompts = JSON.parse(localStorage.getItem('communityPrompts')) || [
 let notificationEmails = JSON.parse(localStorage.getItem('notificationEmails')) || [];
 let promptUsage = JSON.parse(localStorage.getItem('promptUsage')) || {};
 
-// Wait for promptsData to be available
+// Wait for everything to be ready
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize promptsData from window object
-    window.promptsData = window.promptsData || [];
+    // Safety check
+    if (!window.promptsData) {
+        console.error('promptsData not found, initializing empty array');
+        window.promptsData = [];
+    }
     
     console.log('App.js loaded');
-    console.log('Initial promptsData:', window.promptsData);
+    console.log('Initial promptsData:', window.promptsData.length, 'prompts');
     
-    // Apply saved theme
-    if (darkMode) {
-        document.body.classList.add('dark-mode');
-    }
-    
-    // Display prompts
-    displayPrompts();
-    
-    // Set up event listeners
-    setupEventListeners();
-    
-    // Initialize the bulk generation button
-    addBulkGenerationButton();
-    
-    // Update stats
-    updateStats();
-    
-    // Add direct event listener to bulk generate button
-    const bulkButton = document.getElementById('bulk-generate-btn');
-    if (bulkButton) {
-        bulkButton.addEventListener('click', function() {
-            console.log('Bulk generate button clicked');
-            const count = prompt('How many prompts would you like to generate?', '100');
-            if (count && !isNaN(count) && parseInt(count) > 0) {
-                bulkButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
-                bulkButton.disabled = true;
-                
-                // Use setTimeout to allow UI to update before processing
-                setTimeout(() => {
-                    generateBulkPrompts(parseInt(count));
-                    bulkButton.innerHTML = '<i class="fas fa-bolt"></i> Bulk Generate';
-                    bulkButton.disabled = false;
-                }, 100);
-            }
-        });
-    }
-    
-    // Setup new interactive features
-    setupModalFunctionality();
-    setupFooterLinks();
-    
-    // Add CSS for toast
-    const style = document.createElement('style');
-    style.textContent = `
-        #toast-notification {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 4px;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease-out;
-            font-weight: 500;
-        }
-        
-        #toast-notification.toast-visible {
-            transform: translateX(-50%) translateY(0);
-        }
-        
-        .feedback-buttons .active {
-            background: var(--primary-color) !important;
-            color: white !important;
-            border-color: var(--primary-color) !important;
-        }
-    `;
-    document.head.appendChild(style);
+    // Initialize the app
+    initializeApp();
 });
+
+function initializeApp() {
+    try {
+        // Apply saved theme
+        if (darkMode) {
+            document.body.classList.add('dark-mode');
+        }
+        
+        // Display prompts
+        displayPrompts();
+        
+        // Set up event listeners
+        setupEventListeners();
+        
+        // Initialize the bulk generation button
+        addBulkGenerationButton();
+        
+        // Update stats
+        updateStats();
+    } catch (error) {
+        console.error('Error initializing app:', error);
+        showToast('Error loading the application. Please refresh the page.', 'error');
+    }
+}
 
 // Event Listeners
 function setupEventListeners() {

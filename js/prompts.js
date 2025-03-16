@@ -1,5 +1,7 @@
-// Initialize window.promptsData if not exists
-window.promptsData = window.promptsData || [];
+// Safety check and initialization
+if (typeof window.promptsData === 'undefined') {
+    window.promptsData = [];
+}
 
 console.log('Prompts.js loaded');
 
@@ -129,27 +131,39 @@ const defaultPromptsData = [
 
 // Function to merge default prompts with custom prompts
 function mergePrompts(defaults, customs) {
-    // Create a map of existing default IDs
-    const defaultIds = new Set(defaults.map(p => p.id));
-    
-    // Filter out any custom prompts that have the same IDs as defaults
-    const validCustoms = customs.filter(p => !defaultIds.has(p.id));
-    
-    // Combine defaults with valid custom prompts
-    return [...defaults, ...validCustoms];
+    try {
+        // Create a map of existing default IDs
+        const defaultIds = new Set(defaults.map(p => p.id));
+        
+        // Filter out any custom prompts that have the same IDs as defaults
+        const validCustoms = customs.filter(p => !defaultIds.has(p.id));
+        
+        // Combine defaults with valid custom prompts
+        return [...defaults, ...validCustoms];
+    } catch (error) {
+        console.error('Error merging prompts:', error);
+        return defaults; // Fallback to defaults if there's an error
+    }
 }
 
 // Initialize prompts with merged data
-window.promptsData = mergePrompts(
-    defaultPromptsData,
-    JSON.parse(localStorage.getItem('customPrompts') || '[]')
-);
+try {
+    window.promptsData = mergePrompts(
+        defaultPromptsData,
+        JSON.parse(localStorage.getItem('customPrompts') || '[]')
+    );
+    
+    console.log('Total prompts loaded:', window.promptsData.length);
+    
+    // Save the merged prompts
+    localStorage.setItem('customPrompts', JSON.stringify(window.promptsData));
+} catch (error) {
+    console.error('Error initializing prompts:', error);
+    window.promptsData = defaultPromptsData; // Fallback to defaults
+}
 
-// Now we can safely log
-console.log('Total prompts loaded:', window.promptsData.length);
-
-// Save the merged prompts
-localStorage.setItem('customPrompts', JSON.stringify(window.promptsData));
+// Assign AI models
+assignAIModels();
 
 // Function to assign appropriate AI models based on prompt content and category
 function assignAIModels() {
@@ -201,8 +215,6 @@ function assignAIModels() {
     // Save updated prompts to localStorage
     localStorage.setItem('customPrompts', JSON.stringify(promptsData));
 }
-
-assignAIModels();
 
 // Add a function to generate and save new prompts to the codebase
 function generateAndSavePrompts(count = 5) {
