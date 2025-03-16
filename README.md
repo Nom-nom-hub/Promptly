@@ -84,4 +84,4 @@ If you have any questions or suggestions:
 
 ---
 
-Made with ❤️ for the AI community
+Made with ❤️ by [MotivationBanquet](https://github.com/nom-nom-hub)
