@@ -3285,3 +3285,3617 @@ function generateAndSavePrompts(count = 5) {
 
 // Add to console commands
 console.generateAndSavePrompts = generateAndSavePrompts;
+
+// New prompts generated on 2025-03-16T17:45:50.928Z
+const newGeneratedPrompts = [
+    {
+        id: 1000,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1001,
+        title: "Blog Post Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1002,
+        title: "Story Idea Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1003,
+        title: "Ad Copy Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1004,
+        title: "Statistical Model Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1005,
+        title: "Blog Post Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1006,
+        title: "Debugging Help Guide",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1007,
+        title: "Layout Design Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1008,
+        title: "Social Media Post Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1009,
+        title: "Story Idea Template",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1010,
+        title: "Story Idea Guide",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1011,
+        title: "Business Plan Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1012,
+        title: "Social Media Post Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1013,
+        title: "Chart Interpretation Generator",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1014,
+        title: "Ad Copy Assistant",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1015,
+        title: "Marketing Strategy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1016,
+        title: "Article Outline Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1017,
+        title: "Marketing Strategy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1018,
+        title: "Essay Structure Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1019,
+        title: "Business Plan Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1020,
+        title: "Story Idea Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1021,
+        title: "Social Media Post Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1022,
+        title: "Blog Post Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1023,
+        title: "API Documentation Framework",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1024,
+        title: "API Documentation Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1025,
+        title: "UI Mockup Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1026,
+        title: "Article Outline Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1027,
+        title: "Debugging Help Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1028,
+        title: "Marketing Strategy Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1029,
+        title: "Brand Guidelines Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1030,
+        title: "Color Scheme Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1031,
+        title: "Chart Interpretation Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1032,
+        title: "API Documentation Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1033,
+        title: "Code Review Framework",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1034,
+        title: "Chart Interpretation Guide",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1035,
+        title: "UI Mockup Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1036,
+        title: "UI Mockup Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1037,
+        title: "Story Idea Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1038,
+        title: "Color Scheme Assistant",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1039,
+        title: "Chart Interpretation Guide",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1040,
+        title: "Business Plan Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1041,
+        title: "Executive Summary Generator",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1042,
+        title: "Social Media Post Assistant",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1043,
+        title: "Ad Copy Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1044,
+        title: "Social Media Post Generator",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1045,
+        title: "Meeting Agenda Generator",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1046,
+        title: "Executive Summary Generator",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1047,
+        title: "UI Mockup Template",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1048,
+        title: "Email Campaign Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1049,
+        title: "Ad Copy Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1050,
+        title: "Chart Interpretation Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1051,
+        title: "Essay Structure Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1052,
+        title: "Data Analysis Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1053,
+        title: "Marketing Strategy Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1054,
+        title: "Meeting Agenda Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1055,
+        title: "Chart Interpretation Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1056,
+        title: "Code Review Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1057,
+        title: "Executive Summary Guide",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1058,
+        title: "Meeting Agenda Framework",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1059,
+        title: "Chart Interpretation Assistant",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1060,
+        title: "Marketing Strategy Generator",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1061,
+        title: "Layout Design Guide",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1062,
+        title: "Article Outline Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1063,
+        title: "Debugging Help Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1064,
+        title: "Social Media Post Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1065,
+        title: "Data Visualization Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1066,
+        title: "Data Analysis Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1067,
+        title: "Chart Interpretation Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1068,
+        title: "SWOT Analysis Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1069,
+        title: "Email Campaign Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1070,
+        title: "UI Mockup Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1071,
+        title: "Chart Interpretation Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1072,
+        title: "Chart Interpretation Guide",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1073,
+        title: "Article Outline Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1074,
+        title: "Debugging Help Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1075,
+        title: "Story Idea Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1076,
+        title: "Code Review Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1077,
+        title: "Business Plan Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1078,
+        title: "Marketing Strategy Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1079,
+        title: "Chart Interpretation Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1080,
+        title: "Data Analysis Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1081,
+        title: "Article Outline Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1082,
+        title: "Debugging Help Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1083,
+        title: "Layout Design Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1084,
+        title: "Story Idea Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1085,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1086,
+        title: "Brand Guidelines Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1087,
+        title: "Social Media Post Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1088,
+        title: "SWOT Analysis Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1089,
+        title: "Chart Interpretation Assistant",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1090,
+        title: "Code Review Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1091,
+        title: "Layout Design Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1092,
+        title: "Article Outline Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1093,
+        title: "Debugging Help Guide",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1094,
+        title: "Blog Post Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1095,
+        title: "Social Media Post Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1096,
+        title: "UI Mockup Assistant",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1097,
+        title: "Color Scheme Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1098,
+        title: "API Documentation Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1099,
+        title: "Story Idea Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    }
+];
+
+// Add these to defaultPromptsData
+defaultPromptsData.push(...newGeneratedPrompts);
+
+// New prompts generated on 2025-03-16T17:49:32.385Z
+const newGeneratedPrompts = [
+    {
+        id: 1100,
+        title: "SWOT Analysis Generator",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1101,
+        title: "Email Campaign Framework",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1102,
+        title: "API Documentation Assistant",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1103,
+        title: "Ad Copy Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1104,
+        title: "Ad Copy Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1105,
+        title: "Brand Guidelines Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1106,
+        title: "Marketing Strategy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1107,
+        title: "Data Visualization Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1108,
+        title: "Statistical Model Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1109,
+        title: "Brand Guidelines Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1110,
+        title: "Blog Post Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1111,
+        title: "Statistical Model Assistant",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1112,
+        title: "API Documentation Assistant",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1113,
+        title: "Email Campaign Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1114,
+        title: "Email Campaign Generator",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1115,
+        title: "SWOT Analysis Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1116,
+        title: "Marketing Strategy Framework",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1117,
+        title: "Email Campaign Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1118,
+        title: "Algorithm Design Assistant",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1119,
+        title: "Business Plan Template",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1120,
+        title: "Story Idea Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1121,
+        title: "Layout Design Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1122,
+        title: "Ad Copy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1123,
+        title: "UI Mockup Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1124,
+        title: "Business Plan Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1125,
+        title: "Social Media Post Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1126,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1127,
+        title: "Debugging Help Generator",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1128,
+        title: "Meeting Agenda Guide",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1129,
+        title: "UI Mockup Assistant",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1130,
+        title: "Executive Summary Template",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1131,
+        title: "Social Media Post Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1132,
+        title: "Marketing Strategy Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1133,
+        title: "Ad Copy Assistant",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1134,
+        title: "Email Campaign Generator",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1135,
+        title: "Social Media Post Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1136,
+        title: "Blog Post Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1137,
+        title: "Essay Structure Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1138,
+        title: "Code Review Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1139,
+        title: "Ad Copy Guide",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1140,
+        title: "Article Outline Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1141,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1142,
+        title: "Article Outline Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1143,
+        title: "Essay Structure Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1144,
+        title: "Ad Copy Template",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1145,
+        title: "API Documentation Template",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1146,
+        title: "Data Visualization Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1147,
+        title: "SWOT Analysis Assistant",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1148,
+        title: "Meeting Agenda Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1149,
+        title: "Article Outline Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1150,
+        title: "API Documentation Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1151,
+        title: "Data Visualization Framework",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1152,
+        title: "Social Media Post Assistant",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1153,
+        title: "UI Mockup Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1154,
+        title: "Ad Copy Assistant",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1155,
+        title: "Debugging Help Generator",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1156,
+        title: "Code Review Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1157,
+        title: "Debugging Help Assistant",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1158,
+        title: "Ad Copy Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1159,
+        title: "Color Scheme Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1160,
+        title: "Chart Interpretation Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1161,
+        title: "Ad Copy Template",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1162,
+        title: "Data Analysis Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1163,
+        title: "Data Visualization Framework",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1164,
+        title: "Marketing Strategy Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1165,
+        title: "Algorithm Design Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1166,
+        title: "Chart Interpretation Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1167,
+        title: "Code Review Guide",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1168,
+        title: "Article Outline Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1169,
+        title: "Color Scheme Assistant",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1170,
+        title: "Story Idea Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1171,
+        title: "Color Scheme Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1172,
+        title: "Meeting Agenda Guide",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1173,
+        title: "Statistical Model Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1174,
+        title: "Executive Summary Generator",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1175,
+        title: "Brand Guidelines Assistant",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1176,
+        title: "Data Analysis Framework",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1177,
+        title: "Story Idea Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1178,
+        title: "Email Campaign Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1179,
+        title: "Essay Structure Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1180,
+        title: "Marketing Strategy Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1181,
+        title: "SWOT Analysis Framework",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1182,
+        title: "Story Idea Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1183,
+        title: "Ad Copy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1184,
+        title: "Data Analysis Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1185,
+        title: "Business Plan Assistant",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1186,
+        title: "Social Media Post Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1187,
+        title: "Meeting Agenda Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1188,
+        title: "Chart Interpretation Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1189,
+        title: "SWOT Analysis Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1190,
+        title: "Story Idea Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1191,
+        title: "Statistical Model Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1192,
+        title: "Chart Interpretation Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1193,
+        title: "Color Scheme Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1194,
+        title: "Article Outline Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1195,
+        title: "Chart Interpretation Generator",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1196,
+        title: "Data Analysis Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1197,
+        title: "Marketing Strategy Guide",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1198,
+        title: "UI Mockup Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1199,
+        title: "UI Mockup Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1200,
+        title: "Color Scheme Guide",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1201,
+        title: "UI Mockup Framework",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1202,
+        title: "Story Idea Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1203,
+        title: "API Documentation Framework",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1204,
+        title: "Layout Design Guide",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1205,
+        title: "Story Idea Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1206,
+        title: "UI Mockup Framework",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1207,
+        title: "Social Media Post Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1208,
+        title: "Ad Copy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1209,
+        title: "Layout Design Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1210,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1211,
+        title: "Article Outline Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1212,
+        title: "Data Visualization Framework",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1213,
+        title: "Debugging Help Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1214,
+        title: "Ad Copy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1215,
+        title: "Blog Post Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1216,
+        title: "Chart Interpretation Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1217,
+        title: "UI Mockup Assistant",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1218,
+        title: "Algorithm Design Assistant",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1219,
+        title: "Debugging Help Assistant",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1220,
+        title: "Executive Summary Framework",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1221,
+        title: "Algorithm Design Assistant",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1222,
+        title: "Business Plan Guide",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1223,
+        title: "Color Scheme Assistant",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1224,
+        title: "UI Mockup Framework",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1225,
+        title: "Code Review Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1226,
+        title: "Data Visualization Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1227,
+        title: "Debugging Help Framework",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1228,
+        title: "Article Outline Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1229,
+        title: "Social Media Post Generator",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1230,
+        title: "Debugging Help Assistant",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1231,
+        title: "Email Campaign Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1232,
+        title: "Statistical Model Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1233,
+        title: "Ad Copy Generator",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1234,
+        title: "Statistical Model Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1235,
+        title: "Story Idea Template",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1236,
+        title: "Data Analysis Generator",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1237,
+        title: "UI Mockup Template",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1238,
+        title: "SWOT Analysis Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1239,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1240,
+        title: "Essay Structure Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1241,
+        title: "Email Campaign Template",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1242,
+        title: "UI Mockup Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1243,
+        title: "Article Outline Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1244,
+        title: "Meeting Agenda Framework",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1245,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1246,
+        title: "Marketing Strategy Guide",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1247,
+        title: "Chart Interpretation Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1248,
+        title: "Executive Summary Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1249,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1250,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1251,
+        title: "Debugging Help Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1252,
+        title: "Blog Post Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1253,
+        title: "Statistical Model Assistant",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1254,
+        title: "Essay Structure Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1255,
+        title: "Data Visualization Guide",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1256,
+        title: "Debugging Help Generator",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1257,
+        title: "Chart Interpretation Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1258,
+        title: "Chart Interpretation Guide",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1259,
+        title: "Chart Interpretation Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1260,
+        title: "Data Analysis Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1261,
+        title: "Marketing Strategy Framework",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1262,
+        title: "Chart Interpretation Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1263,
+        title: "Layout Design Template",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1264,
+        title: "Blog Post Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1265,
+        title: "SWOT Analysis Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1266,
+        title: "Algorithm Design Assistant",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1267,
+        title: "Data Analysis Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1268,
+        title: "Article Outline Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1269,
+        title: "Color Scheme Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1270,
+        title: "Business Plan Generator",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1271,
+        title: "Debugging Help Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1272,
+        title: "UI Mockup Framework",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1273,
+        title: "Ad Copy Template",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1274,
+        title: "API Documentation Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1275,
+        title: "Chart Interpretation Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1276,
+        title: "Algorithm Design Framework",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1277,
+        title: "Social Media Post Framework",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1278,
+        title: "UI Mockup Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1279,
+        title: "Social Media Post Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1280,
+        title: "UI Mockup Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1281,
+        title: "Social Media Post Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1282,
+        title: "Statistical Model Generator",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1283,
+        title: "Algorithm Design Template",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1284,
+        title: "Algorithm Design Generator",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1285,
+        title: "Brand Guidelines Guide",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1286,
+        title: "Executive Summary Framework",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1287,
+        title: "Article Outline Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1288,
+        title: "Blog Post Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1289,
+        title: "Article Outline Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1290,
+        title: "Business Plan Guide",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1291,
+        title: "UI Mockup Assistant",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1292,
+        title: "Data Visualization Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1293,
+        title: "Story Idea Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1294,
+        title: "Blog Post Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1295,
+        title: "API Documentation Framework",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1296,
+        title: "Statistical Model Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1297,
+        title: "Executive Summary Guide",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1298,
+        title: "Brand Guidelines Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1299,
+        title: "Data Visualization Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1300,
+        title: "Chart Interpretation Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1301,
+        title: "UI Mockup Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1302,
+        title: "Layout Design Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1303,
+        title: "Brand Guidelines Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1304,
+        title: "Data Analysis Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1305,
+        title: "Brand Guidelines Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1306,
+        title: "API Documentation Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1307,
+        title: "Article Outline Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1308,
+        title: "Story Idea Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1309,
+        title: "Story Idea Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1310,
+        title: "Data Visualization Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1311,
+        title: "Story Idea Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1312,
+        title: "Algorithm Design Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1313,
+        title: "Chart Interpretation Generator",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1314,
+        title: "Business Plan Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1315,
+        title: "SWOT Analysis Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1316,
+        title: "Data Visualization Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1317,
+        title: "Meeting Agenda Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1318,
+        title: "UI Mockup Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1319,
+        title: "Essay Structure Guide",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1320,
+        title: "Essay Structure Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1321,
+        title: "SWOT Analysis Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1322,
+        title: "Color Scheme Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1323,
+        title: "Email Campaign Generator",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1324,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1325,
+        title: "Chart Interpretation Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1326,
+        title: "Email Campaign Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1327,
+        title: "Story Idea Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1328,
+        title: "Chart Interpretation Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1329,
+        title: "SWOT Analysis Guide",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1330,
+        title: "API Documentation Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1331,
+        title: "Social Media Post Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1332,
+        title: "Meeting Agenda Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1333,
+        title: "UI Mockup Template",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1334,
+        title: "UI Mockup Assistant",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1335,
+        title: "Data Analysis Assistant",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1336,
+        title: "Blog Post Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1337,
+        title: "Statistical Model Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1338,
+        title: "Debugging Help Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1339,
+        title: "UI Mockup Template",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1340,
+        title: "Business Plan Framework",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1341,
+        title: "Debugging Help Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1342,
+        title: "Social Media Post Template",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1343,
+        title: "Debugging Help Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1344,
+        title: "Marketing Strategy Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1345,
+        title: "Data Analysis Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1346,
+        title: "Algorithm Design Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1347,
+        title: "Brand Guidelines Assistant",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1348,
+        title: "Executive Summary Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1349,
+        title: "Article Outline Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1350,
+        title: "Data Visualization Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1351,
+        title: "Story Idea Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1352,
+        title: "Data Analysis Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1353,
+        title: "Essay Structure Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1354,
+        title: "UI Mockup Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1355,
+        title: "Executive Summary Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1356,
+        title: "Layout Design Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1357,
+        title: "Story Idea Guide",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1358,
+        title: "Essay Structure Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1359,
+        title: "Debugging Help Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1360,
+        title: "Color Scheme Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1361,
+        title: "Chart Interpretation Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1362,
+        title: "UI Mockup Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1363,
+        title: "Statistical Model Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1364,
+        title: "Executive Summary Framework",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1365,
+        title: "Data Analysis Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1366,
+        title: "Data Analysis Framework",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1367,
+        title: "Code Review Guide",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1368,
+        title: "Statistical Model Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1369,
+        title: "Color Scheme Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1370,
+        title: "Business Plan Guide",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1371,
+        title: "Email Campaign Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1372,
+        title: "Code Review Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1373,
+        title: "Meeting Agenda Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1374,
+        title: "Story Idea Template",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1375,
+        title: "Code Review Generator",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1376,
+        title: "Business Plan Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1377,
+        title: "Statistical Model Guide",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1378,
+        title: "Social Media Post Guide",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1379,
+        title: "Article Outline Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1380,
+        title: "Marketing Strategy Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1381,
+        title: "Article Outline Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1382,
+        title: "Blog Post Guide",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1383,
+        title: "Meeting Agenda Guide",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1384,
+        title: "Data Analysis Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1385,
+        title: "UI Mockup Template",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1386,
+        title: "Algorithm Design Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1387,
+        title: "Essay Structure Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1388,
+        title: "Code Review Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1389,
+        title: "Business Plan Guide",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1390,
+        title: "Email Campaign Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1391,
+        title: "API Documentation Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1392,
+        title: "Statistical Model Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1393,
+        title: "Layout Design Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1394,
+        title: "Blog Post Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1395,
+        title: "SWOT Analysis Guide",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1396,
+        title: "Meeting Agenda Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1397,
+        title: "Story Idea Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1398,
+        title: "Essay Structure Framework",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1399,
+        title: "Marketing Strategy Framework",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1400,
+        title: "Story Idea Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1401,
+        title: "Color Scheme Guide",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1402,
+        title: "Statistical Model Guide",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1403,
+        title: "Meeting Agenda Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1404,
+        title: "Email Campaign Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1405,
+        title: "Chart Interpretation Framework",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1406,
+        title: "Blog Post Framework",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1407,
+        title: "Algorithm Design Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1408,
+        title: "Chart Interpretation Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1409,
+        title: "Code Review Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1410,
+        title: "Marketing Strategy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1411,
+        title: "Story Idea Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1412,
+        title: "Meeting Agenda Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1413,
+        title: "Algorithm Design Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1414,
+        title: "Code Review Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1415,
+        title: "API Documentation Guide",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1416,
+        title: "Algorithm Design Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1417,
+        title: "Marketing Strategy Guide",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1418,
+        title: "Blog Post Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1419,
+        title: "Code Review Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1420,
+        title: "Color Scheme Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1421,
+        title: "Debugging Help Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1422,
+        title: "Meeting Agenda Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1423,
+        title: "Social Media Post Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1424,
+        title: "Statistical Model Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1425,
+        title: "Blog Post Template",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1426,
+        title: "Story Idea Guide",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1427,
+        title: "Statistical Model Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1428,
+        title: "API Documentation Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1429,
+        title: "UI Mockup Template",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1430,
+        title: "Color Scheme Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1431,
+        title: "Color Scheme Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1432,
+        title: "Email Campaign Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1433,
+        title: "Brand Guidelines Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1434,
+        title: "Story Idea Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1435,
+        title: "Data Visualization Generator",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1436,
+        title: "UI Mockup Framework",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1437,
+        title: "Statistical Model Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1438,
+        title: "UI Mockup Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1439,
+        title: "Code Review Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1440,
+        title: "UI Mockup Template",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1441,
+        title: "Social Media Post Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1442,
+        title: "Layout Design Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1443,
+        title: "Algorithm Design Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1444,
+        title: "Statistical Model Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1445,
+        title: "Meeting Agenda Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1446,
+        title: "Brand Guidelines Framework",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1447,
+        title: "Email Campaign Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1448,
+        title: "Ad Copy Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1449,
+        title: "Layout Design Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1450,
+        title: "Article Outline Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1451,
+        title: "Essay Structure Framework",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1452,
+        title: "Code Review Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1453,
+        title: "API Documentation Generator",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1454,
+        title: "Chart Interpretation Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1455,
+        title: "Statistical Model Guide",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1456,
+        title: "Social Media Post Generator",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1457,
+        title: "Story Idea Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1458,
+        title: "Article Outline Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1459,
+        title: "Data Visualization Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1460,
+        title: "Marketing Strategy Framework",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1461,
+        title: "Algorithm Design Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1462,
+        title: "Blog Post Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1463,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1464,
+        title: "UI Mockup Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1465,
+        title: "Email Campaign Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1466,
+        title: "Story Idea Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1467,
+        title: "Meeting Agenda Guide",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1468,
+        title: "Statistical Model Generator",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1469,
+        title: "Statistical Model Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1470,
+        title: "Layout Design Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1471,
+        title: "Story Idea Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1472,
+        title: "API Documentation Assistant",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1473,
+        title: "Blog Post Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1474,
+        title: "UI Mockup Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1475,
+        title: "API Documentation Template",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1476,
+        title: "SWOT Analysis Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1477,
+        title: "Data Analysis Framework",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1478,
+        title: "Story Idea Assistant",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1479,
+        title: "Blog Post Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1480,
+        title: "Statistical Model Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1481,
+        title: "Business Plan Guide",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1482,
+        title: "Brand Guidelines Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1483,
+        title: "Executive Summary Assistant",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1484,
+        title: "API Documentation Guide",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1485,
+        title: "Color Scheme Framework",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1486,
+        title: "UI Mockup Assistant",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1487,
+        title: "Data Analysis Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1488,
+        title: "UI Mockup Assistant",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1489,
+        title: "Business Plan Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1490,
+        title: "Business Plan Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1491,
+        title: "Color Scheme Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1492,
+        title: "Social Media Post Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1493,
+        title: "Meeting Agenda Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1494,
+        title: "Social Media Post Assistant",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1495,
+        title: "Social Media Post Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1496,
+        title: "Email Campaign Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1497,
+        title: "Debugging Help Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1498,
+        title: "Data Visualization Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1499,
+        title: "Meeting Agenda Assistant",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1500,
+        title: "Code Review Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1501,
+        title: "Statistical Model Guide",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1502,
+        title: "Brand Guidelines Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1503,
+        title: "Essay Structure Guide",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1504,
+        title: "SWOT Analysis Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1505,
+        title: "Meeting Agenda Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1506,
+        title: "Social Media Post Assistant",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1507,
+        title: "Executive Summary Framework",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1508,
+        title: "Color Scheme Assistant",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1509,
+        title: "Statistical Model Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1510,
+        title: "Chart Interpretation Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1511,
+        title: "SWOT Analysis Assistant",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1512,
+        title: "Marketing Strategy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1513,
+        title: "SWOT Analysis Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1514,
+        title: "Story Idea Template",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1515,
+        title: "Statistical Model Template",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1516,
+        title: "Social Media Post Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1517,
+        title: "SWOT Analysis Template",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1518,
+        title: "Chart Interpretation Assistant",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1519,
+        title: "Chart Interpretation Framework",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1520,
+        title: "Email Campaign Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1521,
+        title: "Layout Design Framework",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1522,
+        title: "Data Analysis Framework",
+        content: "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC].",
+        category: "data"
+    },
+    {
+        id: 1523,
+        title: "Layout Design Template",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1524,
+        title: "Debugging Help Template",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1525,
+        title: "Executive Summary Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1526,
+        title: "Marketing Strategy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1527,
+        title: "Essay Structure Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1528,
+        title: "Brand Guidelines Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1529,
+        title: "Business Plan Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1530,
+        title: "Data Visualization Guide",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1531,
+        title: "Email Campaign Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1532,
+        title: "Ad Copy Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1533,
+        title: "Color Scheme Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1534,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1535,
+        title: "Color Scheme Assistant",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1536,
+        title: "Data Visualization Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1537,
+        title: "Data Visualization Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1538,
+        title: "Color Scheme Guide",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1539,
+        title: "Layout Design Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1540,
+        title: "Email Campaign Template",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1541,
+        title: "UI Mockup Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1542,
+        title: "Social Media Post Template",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1543,
+        title: "Article Outline Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1544,
+        title: "Meeting Agenda Generator",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1545,
+        title: "API Documentation Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1546,
+        title: "API Documentation Framework",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1547,
+        title: "Blog Post Template",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1548,
+        title: "Article Outline Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1549,
+        title: "Data Visualization Framework",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1550,
+        title: "Business Plan Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1551,
+        title: "Essay Structure Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1552,
+        title: "Social Media Post Generator",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1553,
+        title: "Brand Guidelines Framework",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1554,
+        title: "Algorithm Design Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1555,
+        title: "Story Idea Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1556,
+        title: "Story Idea Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1557,
+        title: "Email Campaign Guide",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1558,
+        title: "Blog Post Assistant",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1559,
+        title: "Ad Copy Framework",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1560,
+        title: "Article Outline Generator",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1561,
+        title: "Marketing Strategy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1562,
+        title: "Color Scheme Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1563,
+        title: "SWOT Analysis Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1564,
+        title: "UI Mockup Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1565,
+        title: "Blog Post Template",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1566,
+        title: "Blog Post Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1567,
+        title: "Color Scheme Framework",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 1568,
+        title: "UI Mockup Assistant",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1569,
+        title: "Blog Post Template",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1570,
+        title: "Debugging Help Guide",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1571,
+        title: "Brand Guidelines Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1572,
+        title: "Social Media Post Generator",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1573,
+        title: "Chart Interpretation Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1574,
+        title: "Ad Copy Framework",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 1575,
+        title: "Blog Post Generator",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    },
+    {
+        id: 1576,
+        title: "Brand Guidelines Generator",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1577,
+        title: "Meeting Agenda Assistant",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1578,
+        title: "Ad Copy Generator",
+        content: "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
+        category: "marketing"
+    },
+    {
+        id: 1579,
+        title: "Executive Summary Template",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1580,
+        title: "Meeting Agenda Template",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1581,
+        title: "Business Plan Template",
+        content: "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
+        category: "business"
+    },
+    {
+        id: 1582,
+        title: "Business Plan Assistant",
+        content: "Develop a 30-60-90 day plan for a new [JOB_TITLE] role.",
+        category: "business"
+    },
+    {
+        id: 1583,
+        title: "Data Visualization Assistant",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 1584,
+        title: "Meeting Agenda Guide",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 1585,
+        title: "Data Visualization Template",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1586,
+        title: "API Documentation Generator",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 1587,
+        title: "Essay Structure Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1588,
+        title: "Code Review Template",
+        content: "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
+        category: "coding"
+    },
+    {
+        id: 1589,
+        title: "Layout Design Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1590,
+        title: "Ad Copy Guide",
+        content: "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
+        category: "marketing"
+    },
+    {
+        id: 1591,
+        title: "Chart Interpretation Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1592,
+        title: "Code Review Assistant",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    },
+    {
+        id: 1593,
+        title: "Chart Interpretation Guide",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 1594,
+        title: "Essay Structure Assistant",
+        content: "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media.",
+        category: "writing"
+    },
+    {
+        id: 1595,
+        title: "Brand Guidelines Guide",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1596,
+        title: "Story Idea Generator",
+        content: "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
+        category: "writing"
+    },
+    {
+        id: 1597,
+        title: "Brand Guidelines Framework",
+        content: "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
+        category: "design"
+    },
+    {
+        id: 1598,
+        title: "Color Scheme Guide",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 1599,
+        title: "Algorithm Design Generator",
+        content: "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code.",
+        category: "coding"
+    }
+];
+
+// Add these to defaultPromptsData
+defaultPromptsData.push(...newGeneratedPrompts);
