@@ -253,9 +253,9 @@
         window.promptsData = [];
         window.promptsLoaded = false;
     </script>
-    <!-- Load prompts.js first -->
+    <!-- Load prompts.js first with defer -->
     <script src="js/prompts.js" defer></script>
-    <!-- Then load app.js after prompts are loaded -->
+    <!-- Then load app.js after prompts are loaded with defer -->
     <script src="js/app.js" defer></script>
 </body>
 </html>

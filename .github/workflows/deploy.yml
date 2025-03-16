@@ -177,8 +177,9 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Copy assets
         run: |
-          mkdir -p _site/js
+          mkdir -p _site/js _site/images/icons
           cp -r js/* _site/js/
+          cp manifest.json _site/
           # Ensure proper permissions and line endings
           find _site/js -type f -name "*.js" -exec chmod 644 {} \;
           find _site/js -type f -name "*.js" -exec dos2unix {} \;

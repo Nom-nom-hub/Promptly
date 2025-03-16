@@ -1,0 +1,12 @@
+{
+  "name": "Enterprise AI Prompt Library",
+  "short_name": "AI Prompts",
+  "description": "A collection of AI prompts for various use cases",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "icons": [
+    
+  ]
+}
