@@ -214,3 +214,70 @@ window.dispatchEvent(new Event('promptsLoaded'));
 
 // Ensure prompts are displayed after a short delay
 setTimeout(ensurePromptsDisplayed, 1000);
+
+// New prompts generated on 2025-03-16T18:34:52.004Z
+const newGeneratedPrompts = [
+    {
+        id: 11,
+        title: "Social Media Post Template",
+        content: "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words.",
+        category: "marketing"
+    },
+    {
+        id: 12,
+        title: "API Documentation Framework",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 13,
+        title: "Statistical Model Guide",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 14,
+        title: "Color Scheme Generator",
+        content: "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
+        category: "design"
+    },
+    {
+        id: 15,
+        title: "Data Visualization Assistant",
+        content: "Explain how to interpret this data visualization: [DESCRIPTION]",
+        category: "data"
+    },
+    {
+        id: 16,
+        title: "Meeting Agenda Framework",
+        content: "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
+        category: "business"
+    },
+    {
+        id: 17,
+        title: "Algorithm Design Template",
+        content: "Review this code and suggest improvements for readability and performance: [CODE]",
+        category: "coding"
+    },
+    {
+        id: 18,
+        title: "Data Visualization Template",
+        content: "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
+        category: "data"
+    },
+    {
+        id: 19,
+        title: "Brand Guidelines Generator",
+        content: "Suggest UI improvements for this interface: [DESCRIPTION]",
+        category: "design"
+    },
+    {
+        id: 20,
+        title: "Blog Post Guide",
+        content: "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
+        category: "writing"
+    }
+];
+
+// Add these to defaultPromptsData
+defaultPromptsData.push(...newGeneratedPrompts);
