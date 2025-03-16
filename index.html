@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Enterprise AI Prompt Library - Access curated prompts for business, coding, marketing, and more">
+    <title>Enterprise AI Prompt Library</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233498db' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z'/%3E%3C/svg%3E">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="AI Prompts">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+</head>
+<body class="light-mode">
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <i class="fas fa-brain"></i>
+                <h1>Enterprise AI Prompt Library</h1>
+            </div>
+            <div class="header-actions">
+                <div class="stats">
+                    <span id="prompt-count"><i class="fas fa-list"></i> <span>20</span> Prompts</span>
+                    <span id="favorites-count"><i class="fas fa-star"></i> <span>0</span> Favorites</span>
+                </div>
+                <div class="theme-toggle" title="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <h2>Supercharge your AI interactions</h2>
+            <p>Access curated prompts for business, coding, marketing, and more</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Search and Actions -->
+        <section class="controls-section">
+            <div class="search-container">
+                <div class="search-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search prompts..." aria-label="Search prompts">
+                    <button id="clear-search" class="clear-search-btn" aria-label="Clear search"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="action-buttons">
+                    <button id="random-prompt-btn" title="Show a random prompt"><i class="fas fa-random"></i> Random</button>
+                    <button id="generate-prompt-btn" title="Generate a new prompt"><i class="fas fa-magic"></i> Generate New</button>
+                    <button id="bulk-generate-btn" title="Generate multiple prompts"><i class="fas fa-bolt"></i> Bulk Generate</button>
+                    <button id="export-btn" title="Export your favorites"><i class="fas fa-file-export"></i> Export</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Filter -->
+        <section class="filter-section">
+            <div class="categories-container">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="writing">Writing</button>
+                <button class="category-btn" data-category="coding">Coding</button>
+                <button class="category-btn" data-category="marketing">Marketing</button>
+                <button class="category-btn" data-category="data">Data Analysis</button>
+                <button class="category-btn" data-category="business">Business</button>
+                <button class="category-btn" data-category="design">Design</button>
+                <button class="category-btn" data-category="favorites">Favorites</button>
+            </div>
+        </section>
+
+        <!-- Prompts Display -->
+        <section class="prompts-section">
+            <div class="view-toggle">
+                <button id="grid-view-btn" class="view-btn active" title="Grid view">
+                    <i class="fas fa-th-large"></i> Grid
+                </button>
+                <button id="list-view-btn" class="view-btn" title="List view">
+                    <i class="fas fa-list"></i> List
+                </button>
+                <!-- Community button removed -->
+            </div>
+            <div class="prompts-grid" id="prompts-container">
+                <!-- Prompts will be dynamically inserted here -->
+                <div id="loading-indicator" class="hidden">
+                    <i class="fas fa-spinner fa-spin"></i> Loading prompts...
+                </div>
+            </div>
+        </section>
+
+        <!-- Add a prompt modal template that will be cloned and populated -->
+        <template id="prompt-card-template">
+            <div class="prompt-card">
+                <span class="category-tag"></span>
+                <span class="ai-tag"></span>
+                <h3></h3>
+                <p></p>
+                <div class="card-actions">
+                    <button class="copy-btn">
+                        <i class="fas fa-copy"></i> Copy
+                    </button>
+                    <button class="favorite-btn">
+                        <i class="far fa-star"></i>
+                    </button>
+                    <div class="rating-container">
+                        <i class="far fa-thumbs-up rating-up"></i>
+                        <span class="rating-count">0</span>
+                        <i class="far fa-thumbs-down rating-down"></i>
+                    </div>
+                    <button class="share-btn">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </template>
+
+        <!-- Add pagination controls after the prompts grid -->
+        <section class="pagination-section">
+            <div class="pagination-controls">
+                <button id="prev-page" class="pagination-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                <span id="page-indicator">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+                <button id="next-page" class="pagination-btn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="page-size-control">
+                <label for="page-size">Prompts per page:</label>
+                <select id="page-size">
+                    <option value="10">10</option>
+                    <option value="20" selected>20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Add this after the pagination-section -->
+        <!-- <section class="interactive-features">
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Prompt of the Day</h3>
+                    <p>Get inspired with our daily featured prompt</p>
+                    <button id="daily-prompt-btn" class="feature-btn">View Today's Prompt</button>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Community Prompts</h3>
+                    <p>Share and discover prompts from other users</p>
+                    <button id="community-prompts-btn" class="feature-btn">Explore Community</button>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Prompt Analytics</h3>
+                    <p>See which prompts are most effective</p>
+                    <button id="analytics-btn" class="feature-btn">View Analytics</button>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Add this modal for prompt details -->
+        <div id="prompt-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-title">Prompt Details</h2>
+                <div class="modal-body">
+                    <div id="modal-prompt-content"></div>
+                    <div class="prompt-metadata">
+                        <span id="modal-category"></span>
+                        <span id="modal-date"></span>
+                        <span class="ai-label">Best for: <span id="modal-ai"></span></span>
+                    </div>
+                    <div class="prompt-actions">
+                        <button id="modal-copy-btn"><i class="fas fa-copy"></i> Copy</button>
+                        <button id="modal-favorite-btn"><i class="far fa-star"></i> Favorite</button>
+                        <button id="modal-edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                        <button id="modal-share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                    </div>
+                    <div class="prompt-feedback">
+                        <h4>Was this prompt helpful?</h4>
+                        <div class="feedback-buttons">
+                            <button id="feedback-yes"><i class="fas fa-thumbs-up"></i> Yes</button>
+                            <button id="feedback-no"><i class="fas fa-thumbs-down"></i> No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Dashboard Modal -->
+        <div id="analytics-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Prompt Analytics</h2>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="analytics-tabs">
+                        <button class="tab-btn active" data-tab="usage">Usage</button>
+                        <button class="tab-btn" data-tab="favorites">Favorites</button>
+                        <button class="tab-btn" data-tab="categories">Categories</button>
+                    </div>
+                    <div class="analytics-content">
+                        <div id="usage-chart" class="chart-container"></div>
+                        <div class="top-prompts">
+                            <h3>Top Used Prompts</h3>
+                            <ul id="top-prompts-list" class="interactive-prompt-list">
+                                <!-- Top prompts will be dynamically inserted here -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-brain"></i>
+                    <span>Enterprise AI Prompt Library</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#about" id="about-link" aria-label="About"><i class="fas fa-info-circle"></i> About</a>
+                    <a href="#help" id="help-link" aria-label="Help"><i class="fas fa-question-circle"></i> Help</a>
+                    <!-- Removed Contact link -->
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 AI Prompt Library. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/prompts.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
