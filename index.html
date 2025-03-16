@@ -44,6 +44,9 @@
                     <i class="fas fa-sun"></i>
                     <div class="toggle-ball"></div>
                 </div>
+                <button id="sync-prompts" class="action-btn" title="Sync latest prompts">
+                    <i class="fas fa-sync-alt"></i> Sync Prompts
+                </button>
             </div>
         </div>
     </header>
@@ -283,8 +286,20 @@
             const syncButton = document.getElementById('sync-prompts');
             if (syncButton) {
                 syncButton.addEventListener('click', function() {
+                    // Show loading indicator
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Syncing...';
+                    this.disabled = true;
+                    
+                    // Update status
                     updateStatus('Syncing prompts from GitHub...');
+                    
+                    // Fetch latest prompts
                     fetchLatestPrompts().then(success => {
+                        // Update button
+                        syncButton.innerHTML = '<i class="fas fa-sync-alt"></i> Sync Prompts';
+                        syncButton.disabled = false;
+                        
+                        // Update status
                         updateStatus(success ? 'Prompts synced successfully!' : 'Sync failed, check console');
                         setTimeout(() => {
                             if (loadingStatus) loadingStatus.style.display = 'none';
@@ -298,5 +313,62 @@
     <script src="./js/prompts.js"></script>
     <!-- Then load app.js after prompts are loaded with defer -->
     <script src="./js/app.js"></script>
+    <!-- Force hide loading indicators after 5 seconds as a fallback -->
+    <script>
+        setTimeout(function() {
+            console.log('Timeout reached, forcing hide of loading indicators');
+            const loadingIndicators = document.querySelectorAll('#loading-indicator, .loading-indicator, #loading-status');
+            loadingIndicators.forEach(indicator => {
+                if (indicator) {
+                    indicator.style.display = 'none';
+                    console.log('Force hidden:', indicator.id || 'unnamed indicator');
+                }
+            });
+            
+            // Also check if prompts are displayed
+            const promptsContainer = document.getElementById('prompts-container');
+            if (promptsContainer && promptsContainer.children.length <= 1) {
+                console.log('No prompts displayed, forcing display');
+                if (typeof displayPrompts === 'function') {
+                    displayPrompts();
+                    updateStats();
+                }
+            }
+        }, 5000);
+    </script>
+    <!-- Add this script to ensure prompts are displayed -->
+    <script>
+        // Ensure prompts are displayed after page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM content loaded, checking for prompts');
+            
+            // Function to display prompts if they exist
+            function checkAndDisplayPrompts() {
+                if (window.promptsData && window.promptsData.length > 0) {
+                    console.log('Prompts data found, displaying');
+                    if (typeof displayPrompts === 'function') {
+                        displayPrompts();
+                        if (typeof updateStats === 'function') {
+                            updateStats();
+                        }
+                    }
+                    
+                    // Hide loading indicators
+                    const loadingIndicators = document.querySelectorAll('#loading-indicator, .loading-indicator, #loading-status');
+                    loadingIndicators.forEach(indicator => {
+                        if (indicator) {
+                            indicator.style.display = 'none';
+                        }
+                    });
+                } else {
+                    console.log('No prompts data yet, will check again');
+                    setTimeout(checkAndDisplayPrompts, 500);
+                }
+            }
+            
+            // Start checking for prompts
+            setTimeout(checkAndDisplayPrompts, 1000);
+        });
+    </script>
 </body>
 </html>

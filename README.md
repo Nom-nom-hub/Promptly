@@ -27,6 +27,8 @@ A comprehensive collection of AI prompts designed to help professionals get the 
 
 1. Visit [https://nom-nom-hub.github.io/Promptly/](https://nom-nom-hub.github.io/Promptly/)
    
+   > **Note:** If prompts don't appear immediately, click the "Sync Prompts" button in the top-right corner to load the latest prompts.
+   
    OR
 
 2. Run locally:
@@ -35,7 +37,7 @@ A comprehensive collection of AI prompts designed to help professionals get the 
    cd Promptly
    python -m http.server  # Or any other local server
    ```
-   Then visit `http://localhost:8000`
+   Then visit `http://localhost:8000` and click "Sync Prompts" if needed.
 
 ## 💻 Development
 

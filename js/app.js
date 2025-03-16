@@ -20,6 +20,9 @@ let communityPrompts = JSON.parse(localStorage.getItem('communityPrompts')) || [
 let notificationEmails = JSON.parse(localStorage.getItem('notificationEmails')) || [];
 let promptUsage = JSON.parse(localStorage.getItem('promptUsage')) || {};
 
+// Add a flag to track initialization
+window.appInitialized = false;
+
 // Make sure this code runs immediately, not waiting for DOMContentLoaded
 // Add this right after the darkMode variable is defined
 if (darkMode) {
@@ -61,41 +64,55 @@ function initializeApp() {
         
         // Check if prompts are loaded
         if (!window.promptsData || window.promptsData.length === 0) {
-            console.log('No prompts found yet, waiting for prompts to load');
+            console.log('No prompts found yet, using default prompts');
             
-            // Wait for prompts to load
-            window.addEventListener('promptsLoaded', function() {
-                console.log('Prompts loaded event received, initializing app');
+            // Use default prompts if available
+            if (typeof defaultPromptsData !== 'undefined' && defaultPromptsData.length > 0) {
+                console.log('Using default prompts:', defaultPromptsData.length);
+                window.promptsData = [...defaultPromptsData];
                 completeInitialization();
-            });
-            
-            // Set a timeout in case the event never fires
-            setTimeout(function() {
-                if (!window.promptsLoaded) {
-                    console.error('Prompts never loaded, attempting to recover');
-                    if (typeof defaultPromptsData !== 'undefined') {
-                        window.promptsData = defaultPromptsData;
+            } else {
+                console.log('Waiting for prompts to load');
+                
+                // Wait for prompts to load
+                window.addEventListener('promptsLoaded', function() {
+                    console.log('Prompts loaded event received, initializing app');
+                    completeInitialization();
+                });
+                
+                // Fallback: initialize anyway after a timeout
+                setTimeout(() => {
+                    if (!window.appInitialized) {
+                        console.log('Timeout reached, initializing app with available prompts');
+                        if (!window.promptsData || window.promptsData.length === 0) {
+                            window.promptsData = defaultPromptsData || [];
+                        }
                         completeInitialization();
-                    } else {
-                        document.getElementById('loading-indicator').innerHTML = 
-                            '<div class="error-message">Failed to load prompts. Please refresh the page.</div>';
                     }
-                }
-            }, 5000);
-            
-            return;
+                }, 3000);
+            }
+        } else {
+            console.log('Prompts already loaded, initializing app');
+            completeInitialization();
         }
-        
-        completeInitialization();
     } catch (error) {
-        console.error('Error in app initialization:', error);
-        document.getElementById('loading-indicator').innerHTML = 
-            '<div class="error-message">Error: ' + error.message + '</div>';
+        console.error('Error initializing app:', error);
+        // Try to recover
+        if (!window.promptsData || window.promptsData.length === 0) {
+            window.promptsData = defaultPromptsData || [];
+        }
+        completeInitialization();
     }
 }
 
 function completeInitialization() {
+    if (window.appInitialized) {
+        console.log('App already initialized, skipping');
+        return;
+    }
+    
     console.log('Completing app initialization with', window.promptsData.length, 'prompts');
+    window.appInitialized = true;
     
     // Apply saved theme
     if (darkMode) {
@@ -111,11 +128,8 @@ function completeInitialization() {
     // Update stats
     updateStats();
     
-    // Hide loading indicator if it exists
-    const loadingIndicator = document.getElementById('loading-indicator');
-    if (loadingIndicator) {
-        loadingIndicator.classList.add('hidden');
-    }
+    // Hide ALL loading indicators
+    hideAllLoadingIndicators();
 }
 
 function showError(message) {
@@ -1605,3 +1619,42 @@ async function processPromptTemplate(content) {
     console.log('Processed content:', processedContent);
     return processedContent;
 }
+
+// Add this new function to hide all possible loading indicators
+function hideAllLoadingIndicators() {
+    console.log('Hiding all loading indicators');
+    
+    // Hide the main loading indicator
+    const loadingIndicator = document.getElementById('loading-indicator');
+    if (loadingIndicator) {
+        loadingIndicator.style.display = 'none';
+        loadingIndicator.classList.add('hidden');
+        console.log('Hidden main loading indicator');
+    }
+    
+    // Hide any loading status messages
+    const loadingStatus = document.getElementById('loading-status');
+    if (loadingStatus) {
+        loadingStatus.style.display = 'none';
+        console.log('Hidden loading status');
+    }
+    
+    // Remove any spinner icons that might be in the prompts container
+    const spinners = document.querySelectorAll('.fa-spinner, .loading-indicator');
+    spinners.forEach(spinner => {
+        spinner.style.display = 'none';
+        console.log('Hidden a spinner');
+    });
+}
+
+// Call this function directly after prompts are loaded
+window.addEventListener('promptsLoaded', function() {
+    console.log('promptsLoaded event received, hiding loading indicators');
+    setTimeout(hideAllLoadingIndicators, 500); // Short delay to ensure DOM updates
+});
+
+// Also call it after prompts are updated
+window.addEventListener('promptsUpdated', function() {
+    console.log('promptsUpdated event received, hiding loading indicators');
+    setTimeout(hideAllLoadingIndicators, 500); // Short delay to ensure DOM updates
+}); // Add console command for developers

@@ -183,6 +183,13 @@ jobs:
           # Ensure proper permissions and line endings
           find _site/js -type f -name "*.js" -exec chmod 644 {} \;
           find _site/js -type f -name "*.js" -exec dos2unix {} \;
+      - name: Ensure latest prompts are included
+        run: |
+          echo "Ensuring the latest prompts are included in the build..."
+          # Add a timestamp to prompts.js to force cache invalidation
+          echo "// Last updated: $(date)" >> js/prompts.js
+          # Add a version number to index.html
+          sed -i "s/<\/title>/<\/title>\n    <meta name=\"build-version\" content=\"$(date +%s)\">/g" index.html
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

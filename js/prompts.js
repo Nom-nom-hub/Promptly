@@ -1,4 +1,4 @@
-console.log('prompts.js starting to load');
+console.log('prompts.js loading, version:', PROMPTS_VERSION);
 
 // Sample prompts data
 const defaultPromptsData = [
@@ -69,11 +69,14 @@ if (typeof window.promptsData === 'undefined') {
     window.promptsData = [...defaultPromptsData];
 }
 
-// Function to fetch the latest prompts from GitHub
+// Improved function to fetch the latest prompts from GitHub
 async function fetchLatestPrompts() {
     try {
-        console.log('Fetching latest prompts from GitHub...');
-        const response = await fetch('https://raw.githubusercontent.com/nom-nom-hub/Promptly/main/js/prompts.js');
+        // Add cache-busting parameter to avoid browser caching
+        const url = `https://raw.githubusercontent.com/nom-nom-hub/Promptly/main/js/prompts.js?v=${Date.now()}`;
+        console.log('Fetching latest prompts from GitHub:', url);
+        
+        const response = await fetch(url);
         
         if (!response.ok) {
             throw new Error(`Failed to fetch prompts: ${response.status}`);
@@ -82,44 +85,48 @@ async function fetchLatestPrompts() {
         const promptsJs = await response.text();
         console.log('Fetched prompts.js, length:', promptsJs.length);
         
-        // Extract the defaultPromptsData array from the fetched JS
-        const startMarker = 'const defaultPromptsData = [';
-        const endMarker = '];';
+        // Execute the fetched JS directly to get the most up-to-date prompts
+        // First, save the current promptsData
+        const oldPromptsData = window.promptsData || [];
         
-        const startIndex = promptsJs.indexOf(startMarker) + startMarker.length;
-        const endIndex = promptsJs.indexOf(endMarker, startIndex);
+        // Create a temporary function to evaluate the script in a controlled way
+        const evalPrompts = new Function(promptsJs + '; return defaultPromptsData;');
         
-        if (startIndex === -1 || endIndex === -1) {
-            throw new Error('Could not find prompts data in the fetched file');
+        try {
+            // Get the latest defaultPromptsData
+            const remotePromptsData = evalPrompts();
+            console.log('Parsed remote prompts:', remotePromptsData.length);
+            
+            // Merge with local custom prompts (if any)
+            const localCustomPrompts = oldPromptsData.filter(p => p.custom === true);
+            
+            // Replace the prompts data with the merged data
+            window.promptsData = [...remotePromptsData, ...localCustomPrompts];
+            
+            console.log('Merged prompts:', window.promptsData.length, 'items');
+            
+            // Save to localStorage for offline use
+            localStorage.setItem('latestPrompts', JSON.stringify(remotePromptsData));
+            localStorage.setItem('lastPromptSync', new Date().toISOString());
+            
+            // Update the UI if it's already initialized
+            if (typeof displayPrompts === 'function') {
+                displayPrompts();
+                updateStats();
+                showToast('Prompts updated successfully!', 'success');
+            }
+            
+            // Dispatch event that prompts were updated
+            window.dispatchEvent(new Event('promptsUpdated'));
+            
+            return true;
+        } catch (evalError) {
+            console.error('Error evaluating fetched prompts:', evalError);
+            throw evalError;
         }
-        
-        const promptsArrayText = promptsJs.substring(startIndex, endIndex + 1);
-        
-        // Safely evaluate the array
-        const remotePromptsData = eval(`[${promptsArrayText.slice(0, -1)}]`);
-        console.log('Parsed remote prompts:', remotePromptsData.length);
-        
-        // Merge with local prompts, keeping local custom prompts
-        const localCustomPrompts = window.promptsData.filter(p => p.id > 1000); // Assuming custom prompts have high IDs
-        
-        // Replace the prompts data with the merged data
-        window.promptsData = [...remotePromptsData, ...localCustomPrompts];
-        
-        console.log('Merged prompts:', window.promptsData.length, 'items');
-        
-        // Save to localStorage for offline use
-        localStorage.setItem('latestPrompts', JSON.stringify(remotePromptsData));
-        localStorage.setItem('lastPromptSync', new Date().toISOString());
-        
-        // Update the UI if it's already initialized
-        if (typeof displayPrompts === 'function') {
-            displayPrompts();
-            updateStats();
-        }
-        
-        return true;
     } catch (error) {
         console.error('Error fetching latest prompts:', error);
+        showToast('Failed to fetch latest prompts', 'error');
         
         // Try to load from localStorage if available
         const savedPrompts = localStorage.getItem('latestPrompts');
@@ -128,8 +135,9 @@ async function fetchLatestPrompts() {
                 const parsedPrompts = JSON.parse(savedPrompts);
                 console.log('Using cached prompts from localStorage:', parsedPrompts.length);
                 
-                // Merge with local prompts
-                const localCustomPrompts = window.promptsData.filter(p => p.id > 1000);
+                // Merge with local custom prompts
+                const oldPromptsData = window.promptsData || [];
+                const localCustomPrompts = oldPromptsData.filter(p => p.custom === true);
                 window.promptsData = [...parsedPrompts, ...localCustomPrompts];
                 
                 // Update the UI if it's already initialized
@@ -146,20 +154,56 @@ async function fetchLatestPrompts() {
     }
 }
 
-// Check if we should sync (not too frequent)
-const lastSync = localStorage.getItem('lastPromptSync');
-const shouldSync = !lastSync || (new Date() - new Date(lastSync)) > 3600000; // 1 hour
-
-if (shouldSync) {
-    fetchLatestPrompts().then(success => {
-        console.log('Prompt sync completed:', success ? 'success' : 'failed');
+// Function to ensure prompts are displayed
+function ensurePromptsDisplayed() {
+    console.log('Ensuring prompts are displayed...');
+    
+    // If displayPrompts function exists, call it
+    if (typeof displayPrompts === 'function') {
+        console.log('Calling displayPrompts function');
+        displayPrompts();
+        
+        // Also update stats if that function exists
+        if (typeof updateStats === 'function') {
+            updateStats();
+        }
+    } else {
+        console.log('displayPrompts function not available yet, will try again');
+        // Try again in a moment
+        setTimeout(ensurePromptsDisplayed, 500);
+    }
+    
+    // Hide loading indicators
+    const loadingIndicators = document.querySelectorAll('#loading-indicator, .loading-indicator, #loading-status');
+    loadingIndicators.forEach(indicator => {
+        if (indicator) {
+            indicator.style.display = 'none';
+        }
     });
 }
+
+// Always try to fetch the latest prompts on page load
+// This ensures GitHub Pages always shows the latest generated prompts
+window.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, displaying initial prompts and fetching latest...');
+    
+    // First display the default prompts immediately
+    ensurePromptsDisplayed();
+    
+    // Then try to fetch the latest prompts
+    setTimeout(() => {
+        fetchLatestPrompts().then(success => {
+            console.log('Initial prompt sync completed:', success ? 'success' : 'failed');
+            // Ensure prompts are displayed after fetch attempt
+            ensurePromptsDisplayed();
+        });
+    }, 1000); // Short delay to ensure other scripts are loaded
+});
 
 // Signal that prompts are loaded
 window.promptsLoaded = true;
 // Dispatch event for other scripts waiting on prompts
 window.dispatchEvent(new Event('promptsLoaded'));
 
-console.log('Prompts loaded:', window.promptsData.length, 'items');
-console.log('First prompt:', window.promptsData[0]);
+// Ensure prompts are displayed after a short delay
+setTimeout(ensurePromptsDisplayed, 1000);
