@@ -1,12 +1,9 @@
 {
   "name": "Enterprise AI Prompt Library",
   "short_name": "AI Prompts",
-  "description": "A collection of AI prompts for various use cases",
-  "start_url": ".",
+  "description": "A comprehensive collection of AI prompts for professionals",
+  "start_url": "/Promptly/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#4a90e2",
-  "icons": [
-    
-  ]
+  "theme_color": "#3498db"
 }
