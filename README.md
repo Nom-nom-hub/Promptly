@@ -47,7 +47,7 @@ A comprehensive collection of AI prompts designed to help professionals get the 
 1. Fork the repository
 2. Clone your fork:
    ```bash
-   git clone https://github.com/your-username/Promptly.git
+   git clone https://github.com/nom-nom-hub/Promptly.git
    ```
 3. Create a new branch:
    ```bash
