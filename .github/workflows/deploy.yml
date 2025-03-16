@@ -50,60 +50,62 @@ jobs:
             const categories = ['writing', 'coding', 'marketing', 'business', 'data', 'design'];
             const category = categories[Math.floor(Math.random() * categories.length)];
             
-            const titles = {
-              writing: ['Blog Post', 'Article Outline', 'Story Idea', 'Essay Structure'],
-              coding: ['Code Review', 'Algorithm Design', 'Debugging Help', 'API Documentation'],
-              marketing: ['Ad Copy', 'Email Campaign', 'Social Media Post', 'Marketing Strategy'],
-              business: ['Business Plan', 'SWOT Analysis', 'Meeting Agenda', 'Executive Summary'],
-              data: ['Data Analysis', 'Chart Interpretation', 'Statistical Model', 'Data Visualization'],
-              design: ['UI Mockup', 'Color Scheme', 'Layout Design', 'Brand Guidelines']
-            };
-            
-            const titlePrefix = titles[category][Math.floor(Math.random() * titles[category].length)];
-            const titleSuffix = ['Template', 'Generator', 'Framework', 'Guide', 'Assistant'][Math.floor(Math.random() * 5)];
-            
-            const title = `${titlePrefix} ${titleSuffix}`;
-            
-            const contentTemplates = {
+            const templates = {
               writing: [
-                "Create a detailed outline for a blog post about [TOPIC] that includes an introduction, 5 main sections, and a conclusion.",
-                "Write a compelling introduction paragraph for an article about [TOPIC] that hooks the reader's attention.",
-                "Generate 10 creative headline ideas for an article about [TOPIC] that would perform well on social media."
+                "Create a detailed [CONTENT_TYPE] about [TOPIC] that includes [STRUCTURE] and addresses [AUDIENCE].",
+                "Develop a comprehensive [CONTENT_TYPE] on [TOPIC] with [STRUCTURE] tailored for [AUDIENCE].",
+                "Summarize the key findings, methodology, and implications of research on [TOPIC] in a clear and concise manner."
               ],
               coding: [
-                "Review this code and suggest improvements for readability and performance: [CODE]",
-                "Write a function in [LANGUAGE] that [FUNCTION_DESCRIPTION]",
-                "Explain how to implement [ALGORITHM] in [LANGUAGE] with example code."
+                "Write a function in [LANGUAGE] that [FUNCTIONALITY] with optimal time and space complexity.",
+                "Debug this [LANGUAGE] code that's supposed to [FUNCTIONALITY] but is producing [ERROR].",
+                "Create a step-by-step tutorial on how to implement [FEATURE] in [FRAMEWORK]."
               ],
               marketing: [
-                "Write a compelling marketing email for [PRODUCT] that highlights its key benefits and includes a strong call to action.",
-                "Create 5 different social media post ideas for promoting [PRODUCT/SERVICE] on [PLATFORM].",
-                "Develop a tagline for [BRAND] that communicates its unique value proposition in under 10 words."
+                "Create a marketing campaign for [PRODUCT] targeting [AUDIENCE] with a focus on [BENEFIT].",
+                "Write a compelling email sequence for [PRODUCT_LAUNCH] that addresses common objections and includes clear CTAs.",
+                "Develop a content strategy for [BRAND] that will increase engagement on [PLATFORM]."
               ],
               business: [
-                "Create a SWOT analysis template for a [BUSINESS_TYPE] business.",
-                "Write an executive summary for a business plan for a new [BUSINESS_TYPE] startup.",
-                "Develop a 30-60-90 day plan for a new [JOB_TITLE] role."
+                "Create a business plan for [BUSINESS_TYPE] that includes market analysis, financial projections, and growth strategy.",
+                "Develop a pitch deck for [STARTUP_IDEA] that will appeal to [INVESTOR_TYPE].",
+                "Write a detailed SWOT analysis for [COMPANY] in the [INDUSTRY] industry."
               ],
               data: [
-                "Explain how to interpret this data visualization: [DESCRIPTION]",
-                "Suggest the best chart type to visualize [DATA_DESCRIPTION] and explain why.",
-                "Write a Python script to analyze [DATA_TYPE] data and generate insights about [TOPIC]."
+                "Analyze this dataset about [TOPIC] and provide insights on [SPECIFIC_QUESTION].",
+                "Create a data visualization strategy for [DATA_TYPE] that effectively communicates [KEY_INSIGHT].",
+                "Design a dashboard that tracks [METRICS] for a [BUSINESS_TYPE]."
               ],
               design: [
-                "Describe a color scheme for a [BRAND_TYPE] that conveys [EMOTION/QUALITY].",
-                "Create a wireframe description for the homepage of a [WEBSITE_TYPE] website.",
-                "Suggest UI improvements for this interface: [DESCRIPTION]"
+                "Design a user interface for [APPLICATION] that emphasizes [DESIGN_PRINCIPLE] and improves [USER_EXPERIENCE].",
+                "Create a brand style guide for [COMPANY] that includes color palette, typography, and usage guidelines.",
+                "Develop a wireframe for [WEBSITE_TYPE] that optimizes for [CONVERSION_GOAL]."
               ]
             };
             
-            const content = contentTemplates[category][Math.floor(Math.random() * contentTemplates[category].length)];
+            // Select a random template for the category
+            const template = templates[category][Math.floor(Math.random() * templates[category].length)];
+            
+            // Generate a title based on the template
+            const words = template.split(' ').filter(word => word.length > 4 && !word.includes('['));
+            const titleWords = [];
+            for (let i = 0; i < 3 && words.length > 0; i++) {
+              const index = Math.floor(Math.random() * words.length);
+              titleWords.push(words.splice(index, 1)[0]);
+            }
+            
+            const title = titleWords.join(' ');
+            
+            // AI model recommendation
+            const aiModels = ['GPT-4', 'Claude', 'Gemini', 'Llama'];
+            const aiModel = aiModels[Math.floor(Math.random() * aiModels.length)];
             
             return {
-              id,
-              title,
-              content,
-              category
+              id: id,
+              title: title.charAt(0).toUpperCase() + title.slice(1),
+              content: template,
+              category: category,
+              ai: aiModel
             };
           }
           
@@ -136,8 +138,11 @@ jobs:
             newPromptsCode += `        id: ${prompt.id},\n`;
             newPromptsCode += `        title: "${prompt.title}",\n`;
             newPromptsCode += `        content: "${prompt.content}",\n`;
-            newPromptsCode += `        category: "${prompt.category}"\n`;
-            newPromptsCode += `    }${index < newPrompts.length - 1 ? ',' : ''}\n`;
+            newPromptsCode += `        category: "${prompt.category}"`;
+            if (prompt.ai) {
+              newPromptsCode += `,\n        ai: "${prompt.ai}"`;
+            }
+            newPromptsCode += `\n    }${index < newPrompts.length - 1 ? ',' : ''}\n`;
           });
           
           newPromptsCode += '];\n\n';
@@ -152,7 +157,7 @@ jobs:
           
           node generate-prompts.js
         env:
-          PROMPT_COUNT: ${{ github.event.inputs.prompt_count }}
+          PROMPT_COUNT: ${{ github.event.inputs.prompt_count || '10' }}
       
       - name: Commit and push changes
         run: |
