@@ -20,6 +20,13 @@ let communityPrompts = JSON.parse(localStorage.getItem('communityPrompts')) || [
 let notificationEmails = JSON.parse(localStorage.getItem('notificationEmails')) || [];
 let promptUsage = JSON.parse(localStorage.getItem('promptUsage')) || {};
 
+// Make sure this code runs immediately, not waiting for DOMContentLoaded
+// Add this right after the darkMode variable is defined
+if (darkMode) {
+    document.documentElement.classList.add('dark-mode');
+    document.body.classList.add('dark-mode');
+}
+
 // Wait for everything to be ready
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM loaded, dark mode state:', darkMode);
@@ -100,9 +107,6 @@ function completeInitialization() {
     
     // Set up event listeners
     setupEventListeners();
-    
-    // Initialize the bulk generation button
-    addBulkGenerationButton();
     
     // Update stats
     updateStats();
@@ -438,9 +442,11 @@ function toggleFavorite(e) {
 
 // Toggle theme
 function toggleTheme() {
+    document.documentElement.classList.toggle('dark-mode');
     document.body.classList.toggle('dark-mode');
     darkMode = document.body.classList.contains('dark-mode');
     localStorage.setItem('darkMode', darkMode);
+    console.log('Dark mode toggled to:', darkMode);
 }
 
 // Show random prompt with improved visual highlighting
@@ -784,24 +790,33 @@ function exportFavorites() {
 
 // Update stats counters - completely rewritten for reliability
 function updateStats() {
-    // Force a direct update of the stats in the header
-    const promptCountElement = document.getElementById('prompt-count');
-    if (promptCountElement && promptCountElement.querySelector('span')) {
-        promptCountElement.querySelector('span').textContent = promptsData.length;
-    } else {
-        console.error('Could not find prompt-count element');
+    console.log('Updating stats...');
+    // Make sure promptsData exists
+    if (!window.promptsData) {
+        console.error('promptsData is not defined');
+        return;
     }
     
-    const favoritesCountElement = document.getElementById('favorites-count');
-    if (favoritesCountElement && favoritesCountElement.querySelector('span')) {
-        favoritesCountElement.querySelector('span').textContent = favorites.length;
-    } else {
-        console.error('Could not find favorites-count element');
+    // Update prompts count
+    const promptsCount = document.getElementById('prompts-count');
+    if (promptsCount) {
+        promptsCount.textContent = window.promptsData.length;
+        console.log('Updated prompts count:', window.promptsData.length);
     }
     
-    // Log the actual values for debugging
-    console.log(`Stats should update to: ${promptsData.length} prompts, ${favorites.length} favorites`);
+    // Update favorites count
+    const favoritesCount = document.getElementById('favorites-count');
+    if (favoritesCount) {
+        favoritesCount.textContent = favorites.length;
+        console.log('Updated favorites count:', favorites.length);
+    }
 }
+
+// Call updateStats after prompts are loaded
+window.addEventListener('promptsLoaded', function() {
+    console.log('promptsLoaded event received');
+    updateStats();
+});
 
 // Add this code at the end of your file to force an immediate update
 // This will run as soon as the script loads
