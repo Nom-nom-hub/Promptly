@@ -1,3 +1,7 @@
+// Add at the start of the file
+console.log('Prompts.js loaded');
+console.log('Default prompts:', defaultPromptsData);
+
 // Sample prompts data
 const defaultPromptsData = [
     {

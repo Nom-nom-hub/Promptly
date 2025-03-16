@@ -1,3 +1,7 @@
+// Add at the start of the file
+console.log('App.js loaded');
+console.log('Initial promptsData:', promptsData);
+
 // DOM Elements
 const promptsContainer = document.getElementById('prompts-container');
 const searchInput = document.getElementById('search-input');
