@@ -44,11 +44,12 @@ A comprehensive collection of AI prompts designed to help professionals get the 
 - Git for version control
 
 ### Setup for Development
-1. Fork the repository
+1. Fork the repository at https://github.com/nom-nom-hub/Promptly
 2. Clone your fork:
    ```bash
-   git clone https://github.com/nom-nom-hub/Promptly.git
+   git clone https://github.com/YOUR-USERNAME/Promptly.git
    ```
+   Replace `YOUR-USERNAME` with your GitHub username
 3. Create a new branch:
    ```bash
    git checkout -b feature/your-feature-name
