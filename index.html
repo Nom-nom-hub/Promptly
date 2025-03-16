@@ -97,7 +97,7 @@
             </div>
             <div class="prompts-grid" id="prompts-container">
                 <!-- Prompts will be dynamically inserted here -->
-                <div id="loading-indicator" class="hidden">
+                <div id="loading-indicator" class="loading-indicator">
                     <i class="fas fa-spinner fa-spin"></i> Loading prompts...
                 </div>
             </div>
@@ -254,8 +254,8 @@
         window.promptsLoaded = false;
     </script>
     <!-- Load prompts.js first with defer -->
-    <script src="js/prompts.js" defer></script>
+    <script src="./js/prompts.js"></script>
     <!-- Then load app.js after prompts are loaded with defer -->
-    <script src="js/app.js" defer></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

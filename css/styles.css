@@ -1556,26 +1556,25 @@ body.dark-mode .community-prompt {
 }
 
 .loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.loading-indicator.hidden {
+    display: none;
+}
+
+.error-message {
+    color: #e74c3c;
+    padding: 1rem;
     text-align: center;
-    padding: 30px;
-    color: var(--text-muted);
-}
-
-.loading-indicator i {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.empty-state {
-    text-align: center;
-    padding: 40px 20px;
-    color: var(--text-muted);
-}
-
-.empty-state i {
-    font-size: 48px;
-    margin-bottom: 15px;
-    opacity: 0.5;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    margin: 1rem;
 }
 
 /* Highlight styles */

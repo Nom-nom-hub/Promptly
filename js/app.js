@@ -33,39 +33,77 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function initializeApp() {
     try {
-        // Safety check
-        if (!window.promptsData || !window.promptsData.length) {
-            console.error('No prompts found, checking defaultPromptsData');
-            // Try to recover using defaultPromptsData
-            if (typeof defaultPromptsData !== 'undefined') {
-                window.promptsData = defaultPromptsData;
-            } else {
-                throw new Error('No prompts data available');
-            }
+        console.log('App initialization started');
+        
+        // Check if prompts are loaded
+        if (!window.promptsData || window.promptsData.length === 0) {
+            console.log('No prompts found yet, waiting for prompts to load');
+            
+            // Wait for prompts to load
+            window.addEventListener('promptsLoaded', function() {
+                console.log('Prompts loaded event received, initializing app');
+                completeInitialization();
+            });
+            
+            // Set a timeout in case the event never fires
+            setTimeout(function() {
+                if (!window.promptsLoaded) {
+                    console.error('Prompts never loaded, attempting to recover');
+                    if (typeof defaultPromptsData !== 'undefined') {
+                        window.promptsData = defaultPromptsData;
+                        completeInitialization();
+                    } else {
+                        document.getElementById('loading-indicator').innerHTML = 
+                            '<div class="error-message">Failed to load prompts. Please refresh the page.</div>';
+                    }
+                }
+            }, 5000);
+            
+            return;
         }
-
-        console.log('App.js loaded');
-        console.log('Initial promptsData:', window.promptsData.length, 'prompts');
         
-        // Apply saved theme
-        if (darkMode) {
-            document.body.classList.add('dark-mode');
-        }
-        
-        // Display prompts
-        displayPrompts();
-        
-        // Set up event listeners
-        setupEventListeners();
-        
-        // Initialize the bulk generation button
-        addBulkGenerationButton();
-        
-        // Update stats
-        updateStats();
+        completeInitialization();
     } catch (error) {
-        console.error('Error initializing app:', error);
-        showToast('Error loading the application. Please refresh the page.', 'error');
+        console.error('Error in app initialization:', error);
+        document.getElementById('loading-indicator').innerHTML = 
+            '<div class="error-message">Error: ' + error.message + '</div>';
+    }
+}
+
+function completeInitialization() {
+    console.log('Completing app initialization with', window.promptsData.length, 'prompts');
+    
+    // Apply saved theme
+    if (darkMode) {
+        document.body.classList.add('dark-mode');
+    }
+    
+    // Display prompts
+    displayPrompts();
+    
+    // Set up event listeners
+    setupEventListeners();
+    
+    // Initialize the bulk generation button
+    addBulkGenerationButton();
+    
+    // Update stats
+    updateStats();
+    
+    // Hide loading indicator if it exists
+    const loadingIndicator = document.getElementById('loading-indicator');
+    if (loadingIndicator) {
+        loadingIndicator.classList.add('hidden');
+    }
+}
+
+function showError(message) {
+    const loadingIndicator = document.getElementById('loading-indicator');
+    if (loadingIndicator) {
+        loadingIndicator.innerHTML = `<div class="error-message">${message}</div>`;
+        loadingIndicator.classList.remove('hidden');
+    } else {
+        console.error(message);
     }
 }
 
